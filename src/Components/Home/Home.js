@@ -1,10 +1,14 @@
 import styled from "styled-components";
 import ImgSlider from "../ImgSlider/ImgSlider";
+import Recommends from "../Recommends/Recommends";
+import Viewers from "../Viewers/Viewers";
 
 function Home() {
   return (
     <Container>
       <ImgSlider />
+      <Viewers />
+      <Recommends />
     </Container>
   );
 }
