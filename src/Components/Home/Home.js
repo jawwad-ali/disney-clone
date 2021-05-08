@@ -1,7 +1,15 @@
 import styled from "styled-components";
 import ImgSlider from "../ImgSlider/ImgSlider";
+import NewDisney from "../NewDisney/NewDisney";
+import Originals from "../Originals/Originals";
 import Recommends from "../Recommends/Recommends";
+import Trending from "../Trending/Trending";
 import Viewers from "../Viewers/Viewers";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import db from "../../firebase";
+import { setMovies } from "../../features/movie/movieSlice";
+import { selectUserName } from "../../features/user/userSlice";
 
 function Home() {
   return (
@@ -9,6 +17,9 @@ function Home() {
       <ImgSlider />
       <Viewers />
       <Recommends />
+      <NewDisney />
+      <Originals />
+      <Trending />
     </Container>
   );
 }
