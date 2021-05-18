@@ -6,7 +6,6 @@ import { useSelector } from "react-redux";
 
 function NewDisney() {
   const movies = useSelector(selectNewDisney);
-  console.log(movies);
 
   return (
     <Container>

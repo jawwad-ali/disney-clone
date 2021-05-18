@@ -18,3 +18,4 @@ const storage = firebase.storage();
 
 export { auth, provider, storage };
 export default db;
+ 
