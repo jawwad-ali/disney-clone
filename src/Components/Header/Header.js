@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import { auth, provider } from "../../firebase";
 import {
-  selectUserEmail,
   selectUserName,
   selectUserPhoto,
   setSignOutState,

@@ -27,4 +27,3 @@ function App() {
 }
 
 export default App;
-// 3.47.48
