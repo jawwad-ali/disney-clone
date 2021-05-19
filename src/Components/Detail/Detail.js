@@ -8,24 +8,16 @@ const Detail = (props) => {
   const [detailData, setDetailData] = useState({});
 
   useEffect(() => {
-    db.collection("movies")
+    db.collection("movie")
       .doc(id)
       .get()
       .then((doc) => {
-        if (doc.exists) {
-          setDetailData(doc.data());
-        } else {
-          console.log("no such document in firebase 🔥");
-        }
+        doc.exists ? setDetailData(doc.data()) : console.log("no Data");
       })
       .catch((error) => {
         console.log("Error getting document:", error);
       });
   }, [id]);
-
-  // .then((doc) => {
-  //   doc.exists ? setDetailData(doc.data()) : console.log("no Data");
-  // })
 
   return (
     <Container>
